@@ -1,0 +1,79 @@
+:root{
+  --bg: #0f0e19;
+  --bg-elev: #161328;
+  --text: #ebe9f5;
+  --muted: #c8c3de;
+  --primary: #6a0dad;
+  --primary-700:#580aa9;
+  --primary-300:#8a2be2;
+  --accent:#b084ff;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  line-height:1.6;
+  color:var(--text);
+  background: radial-gradient(1200px 800px at 70% -10%, rgba(138,43,226,.15), transparent 60%) , var(--bg);
+}
+a{color:var(--accent); text-decoration: none;}
+a:hover{text-decoration: underline;}
+.container{max-width:1100px; margin:0 auto; padding:0 20px;}
+.header{
+  position:sticky; top:0; backdrop-filter:saturate(180%) blur(6px);
+  background: rgba(15,14,25,.6);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  z-index:1000;
+}
+.nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
+.nav a.logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px; color:#fff;}
+.nav img{width:28px; height:28px}
+.menu{display:flex; gap:22px}
+.menu a{color:#fff; font-weight:600}
+.cta-btn{
+  background: linear-gradient(135deg, var(--primary), var(--primary-300));
+  border:none; color:#fff; padding:12px 18px; border-radius:10px; font-weight:700;
+  box-shadow: var(--shadow);
+}
+.hero{padding:80px 0 40px}
+.hero-grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:32px; align-items:center}
+.badge{display:inline-block; padding:6px 10px; border-radius:999px; background: rgba(138,43,226,.15); color:#d8c8ff; border:1px solid rgba(138,43,226,.35); font-weight:700; font-size:12px; letter-spacing:.4px}
+h1{font-size:48px; line-height:1.1; margin:14px 0 10px}
+.lead{font-size:18px; color:var(--muted); margin:0 0 24px}
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:20px;
+  box-shadow: var(--shadow);
+}
+.grid-3{display:grid; grid-template-columns: repeat(3,1fr); gap:18px}
+.grid-2{display:grid; grid-template-columns: repeat(2,1fr); gap:18px}
+.section{padding:50px 0}
+.section h2{margin:0 0 10px; font-size:32px}
+.section p.section-lead{color:var(--muted); margin:0 0 24px}
+.service h3{margin:10px 0 6px}
+.kpis{display:flex; gap:16px; flex-wrap:wrap}
+.kpi{flex:1; min-width:180px; padding:14px; border-radius:12px; background:#1d1735; border:1px solid rgba(255,255,255,.08)}
+.kpi strong{font-size:22px; display:block}
+.portfolio .item{display:flex; gap:16px; align-items:center; padding:14px; border-radius:12px; background:#1d1735; border:1px solid rgba(255,255,255,.08)}
+.portfolio .thumb{width:92px; height:64px; border-radius:10px; background:linear-gradient(135deg, #5b0ea9, #8a2be2)}
+.footer{padding:40px 0; color:#bdb7d9; border-top:1px solid rgba(255,255,255,.08); background:#0e0d17}
+.footer small{display:block; margin-top:8px; color:#7f789b}
+.notice{font-size:13px; color:#a79fc6}
+.form input, .form textarea{
+  width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.12);
+  background:#130f23; color:#fff; outline:none;
+}
+.form textarea{min-height:120px; resize:vertical}
+.form .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.form button{margin-top:10px}
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .menu{display:none}
+}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
